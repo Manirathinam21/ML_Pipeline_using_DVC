@@ -34,7 +34,7 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
 
 def save_data(train_data: pd.DataFrame, test_data: pd.DataFrame, data_path: str) -> None:
     try:
-        data_path= os.pathjoin(data_path, 'raw')
+        data_path= os.path.join(data_path, 'raw')
         os.makedirs(data_path, exist_ok=True)
         train_data.to_csv(os.path.join(data_path,'train.csv'), index=False)
         test_data.to_csv(os.path.join(data_path,'test.csv'), index=False)
